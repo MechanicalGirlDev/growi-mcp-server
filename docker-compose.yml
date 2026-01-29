@@ -8,5 +8,6 @@ services:
       - .env
     environment:
       - NODE_ENV=production
+      - DOTENV_FLOW_SILENT=true
     # stdin_open: true  # Uncomment for stdio transport
     # tty: true         # Uncomment for stdio transport
