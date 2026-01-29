@@ -1,0 +1,12 @@
+services:
+  growi-mcp-server:
+    build: .
+    image: growi-mcp-server:latest
+    container_name: growi-mcp-server
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+    # stdin_open: true  # Uncomment for stdio transport
+    # tty: true         # Uncomment for stdio transport
