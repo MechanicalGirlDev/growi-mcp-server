@@ -33,6 +33,9 @@ RUN groupadd --gid 1000 node_group && \
 COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/package.json ./
 
+# Create empty .env file for dotenv-flow
+RUN touch .env
+
 # Set environment
 ENV NODE_ENV=production
 
